@@ -8,6 +8,11 @@ A reproducible machine-learning baseline that scores telecom customer churn from
 attributes. It compares Logistic Regression and Random Forest, selects using validation Average Precision,
 and tunes a validation F1 threshold before evaluating an untouched test partition.
 
+
+**Project status:** evaluated research baseline with reproducible training and batch prediction.
+
+[Quick start](#quick-start) · [Results](#reproduced-baseline) · [Model card](docs/MODEL_CARD.md) · [Tests](#tests) · [Contributing](CONTRIBUTING.md)
+
 ## Engineering highlights
 
 - One saved pipeline includes imputation, scaling, categorical encoding and the classifier.
@@ -26,7 +31,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python app.py train
-python app.py predict --input first_telc.csv --output artifacts/predictions.csv
+python app.py predict --input examples/customers.csv --output artifacts/predictions.csv
 ```
 
 Windows: activate with `.venv\Scripts\Activate.ps1` in PowerShell. Python 3.11 or 3.12 is recommended.
@@ -35,10 +40,10 @@ Windows: activate with `.venv\Scripts\Activate.ps1` in PowerShell. Python 3.11 o
 
 The included `WA_Fn-UseC_-Telco-Customer-Churn.csv` is the Telco customer-churn sample.
 Target: `Churn`, mapped as `No=0`, `Yes=1`. Record the original dataset source and its redistribution
-terms before republishing these sample files elsewhere; a source/license record was not present in
-this repository at audit time.
+terms before republishing these sample files elsewhere; the repository has no independently verified
+dataset source/license record.
 
-Data → remove duplicate feature/label rows → stratified split → train-only preprocessing → validation
+Data → remove exact raw duplicate records → stratified split → train-only preprocessing → validation
 model and threshold selection → final test metrics → artifact and batch predictions.
 
 ## Reproduced baseline
