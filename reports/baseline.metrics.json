@@ -1,0 +1,31 @@
+{
+  "model": "logistic_regression",
+  "seed": 42,
+  "validation_average_precision": {
+    "logistic_regression": 0.6424141899636456,
+    "random_forest": 0.6224184782687834
+  },
+  "threshold": 0.6098118052437158,
+  "test_precision": 0.5479166666666667,
+  "test_recall": 0.7032085561497327,
+  "test_f1": 0.6159250585480094,
+  "test_average_precision": 0.6331710424354436,
+  "test_roc_auc": 0.8425844118938748,
+  "confusion_matrix": [
+    [
+      818,
+      217
+    ],
+    [
+      111,
+      263
+    ]
+  ],
+  "split_rows": {
+    "train": 4225,
+    "validation": 1409,
+    "test": 1409
+  },
+  "positive_label": "Yes",
+  "scikit_learn_version": "1.6.1"
+}

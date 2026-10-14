@@ -1,0 +1,15 @@
+
+
+# Local development and generated output
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.pyc
+.env
+artifacts/
+logs/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
