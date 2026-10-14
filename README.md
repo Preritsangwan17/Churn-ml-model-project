@@ -89,3 +89,8 @@ Synthetic fixtures check software behavior; the evaluation above uses the real r
 Only load serialized models you trust. See [contribution guidance](CONTRIBUTING.md).
 
 Built by [Prerit Sangwan](https://github.com/Preritsangwan17), B.Tech CSE (AI/ML).
+
+## Model documentation
+
+See the [model card](docs/MODEL_CARD.md) for the intended use, input contract, evaluation method and limitations.
+For the recorded numerical environment, install `requirements-repro.txt` in a fresh virtual environment.
